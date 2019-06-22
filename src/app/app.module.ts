@@ -7,14 +7,21 @@ import { AppRoutingModule }     from './app-routing.module';
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
 import {MatButtonModule} from '@angular/material/button';
-
+import { MatDialogModule } from '@angular/material';
+import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { ResumeComponent } from './resume/resume.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    BrowserAnimationsModule
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
@@ -25,8 +32,19 @@ import {MatButtonModule} from '@angular/material/button';
   ],
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    AboutComponent,
+    ProjectsComponent,
+    ContactComponent,
+    ResumeComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  entryComponents: [
+    DashboardComponent,
+    AboutComponent,
+    ProjectsComponent,
+    ResumeComponent,
+    ContactComponent
+  ]
 })
 export class AppModule { }
