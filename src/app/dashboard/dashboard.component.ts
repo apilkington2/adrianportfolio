@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {
   MatDialog,
-  MatDialogConfig
+  MatDialogConfig,
+  MatDialogRef
 } from "@angular/material";
 import { AboutComponent } from '../about/about.component';
 import { ProjectsComponent } from '../projects/projects.component';
@@ -16,28 +17,29 @@ import { ResumeComponent } from '../resume/resume.component';
 })
 export class DashboardComponent implements OnInit {
 
+  aboutDialogRef: MatDialogRef<AboutComponent>;
+  resumeDialogRef: MatDialogRef<ResumeComponent>;
+  contactDialogRef: MatDialogRef<ContactComponent>;
+  projectsDialogRef: MatDialogRef<ProjectsComponent>;
+
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   openAbout() {
-    const dialogConfig = new MatDialogConfig();
-    this.dialog.open(AboutComponent, dialogConfig);
+    this.aboutDialogRef = this.dialog.open(AboutComponent);
   }
 
   openResume() {
-    const dialogConfig = new MatDialogConfig();
-    this.dialog.open(ResumeComponent, dialogConfig);
+    this.resumeDialogRef = this.dialog.open(ResumeComponent);
   }
 
   openProjects() {
-    const dialogConfig = new MatDialogConfig();
-    this.dialog.open(ProjectsComponent, dialogConfig);
+    this.projectsDialogRef = this.dialog.open(ProjectsComponent);
   }
 
   openContact() {
-    const dialogConfig = new MatDialogConfig();
-    this.dialog.open(ContactComponent, dialogConfig);
+    this.contactDialogRef = this.dialog.open(ContactComponent);
   }
 }

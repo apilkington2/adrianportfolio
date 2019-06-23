@@ -1,68 +1,48 @@
-.container {
-  vertical-align: center;
-  text-align: center;
-  padding-top: 15%;
+.leftCol {
+    display: inline-block;
 }
 
-body {
-  height:100vh;
-  background-position: center;
-  background-repeat: repeat-y !important;
-  background-size: cover;
-  background-color: black;
+.mission {
+    display: inline-block;
+    width: 300px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
-.buttonB {
-  width: 175px;
-  height: 175px;
-  text-align: center;
-  line-height: 60px;
-  color: #fff;
-  font-size: 24px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: sans-serif;
-  box-sizing: border-box;
-  background-size: 400%;
-  margin: 15px;
-  outline: 0 none;
+.missionRight {
+    display: inline-block;
 }
 
-.red {
-  background: linear-gradient(90deg, #d25529, #e05858, #c73969);
+.rightCol {
+    display: inline-block;
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 20px;
 }
 
-.blue {
-  background: linear-gradient(90deg, #006699, #3399cc, #6699cc);
+h3 {
+    color: darkred;
+    text-align: center;
 }
 
-@keyframes animate{
-  0%{
-    background-position: 0%;
-  }
-  100%{
-    background-position: 400%;
-  }
+p {
+    word-break: inherit;
+    text-align: left;
 }
 
-.buttonB:before{
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  z-index:-1;
-  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-  background-size: 500%;
-  border-radius: 40px;
-  filter: blur(20px);
-  opacity: 0;
-  transition: 0.5s;
+.about {
+    width: auto;
+    text-align: center;
+    padding: 30px;
+    height: 500px;
+    overflow-y: scroll;
 }
 
-.buttonB:hover:before{
-  filter: blur(20px);
-  opacity: 1;
-  animation: animate 16s linear infinite;
+hr {
+    margin-top: 0px;
+}
+
+.insta {
+    padding-top: 65px;
+    width: 200px;
 }
